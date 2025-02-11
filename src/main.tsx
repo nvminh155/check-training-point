@@ -6,11 +6,16 @@ import App from "./App.tsx";
 
 import "@/styles/globals.css";
 
+import AdminPage from "./pages/Client/Home/Admin/index.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/admin",
+    element: <AdminPage />,
   },
 ]);
 
