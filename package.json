@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@iconify/tools": "^4.0.5",
+    "@types/facebook-js-sdk": "^3.3.12",
+    "@vitejs/plugin-basic-ssl": "^1.2.0",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
     "nookies": "^2.5.2",

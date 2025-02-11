@@ -11,7 +11,7 @@ import Home from "@/pages/Client/Home/index.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <App />,
   },
 ]);
 
