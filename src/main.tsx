@@ -6,7 +6,6 @@ import App from "./App.tsx";
 
 import "@/styles/globals.css";
 
-import Home from "@/pages/Client/Home/index.tsx";
 
 const router = createBrowserRouter([
   {
