@@ -29,7 +29,7 @@ function App() {
     fetch(import.meta.env.VITE_API_ENDPOINT + "/posts")
       .then((res) => res.json())
       .then((res) => {
-        console.log(res);
+        // console.log(res);
         setPosts(res.data);
       });
   }, []);
