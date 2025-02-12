@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { dateIsExpiry } from "./utils/checkDateExpiry";
 
 import "./App.css";
+import Register from "./pages/Client/Register";
 
 declare global {
   interface Window {
@@ -58,7 +59,7 @@ const NewUI = () => {
       <h1 className="my-gradient-bg select-none px-2 text-center font-bold uppercase drop-shadow-lg max-sm:text-[35px] sm:text-[60px] lg:text-[100px]">
         Find your <br></br>training point
       </h1>
-
+      <Register />
       {isLoading && (
         <div className="flex flex-1 items-center justify-center">
           <p className="text-gray-300 max-sm:text-sm">Đang tải dữ liệu!!!</p>

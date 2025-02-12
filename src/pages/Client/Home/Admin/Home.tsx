@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { sendEmailAccessTokenIsInvalid } from "@/utils/email";
+import { sendEmailAccessTokenIsInvalid, sendNewNoticeActivity } from "@/utils/email";
 import GradientButton from "@/components/GradientButton";
 import ErrorUI from "@/components/SomethingWentWrong";
 
@@ -64,7 +64,7 @@ const AdminHome = () => {
   
 
   return (
-    <div>
+    <div className="flex flex-col">
       <input
         type="text"
         value={token}
@@ -78,8 +78,30 @@ const AdminHome = () => {
       >
         UPDATE POST
       </button>
+
+      <ButtonNoticeToAllUserEmail />
     </div>
   );
 };
 
+
+const ButtonNoticeToAllUserEmail = () => {
+  return (
+    <button
+      onClick={() => {
+        fetch(import.meta.env.VITE_API_ENDPOINT + "/user-register", {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }).then((res) => res.json()).then(res => {
+          const {data} = res;
+          data.forEach((email: string) => sendNewNoticeActivity(email));
+        });
+      }}
+    >
+      Notice to all user email
+    </button>
+  );
+}
 export default AdminHome;
