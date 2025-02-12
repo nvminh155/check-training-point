@@ -2,12 +2,20 @@
 
 export default {
   darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./src/*"],
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
+        xs: "500.98px",
+        sm: "900.98px",
+        md: "1200.98px",
+        lg: "1400.98px",
+        "max-xs": { max: "500.981px" },
+        "max-sm": { max: "900.981px" },
+        "max-md": { max: "1200.981px" },
+        "max-lg": { max: "1400.981px" },
         "2xl": "1400px",
       },
     },

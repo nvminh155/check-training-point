@@ -1,0 +1,6 @@
+.my-gradient-bg {
+    background: linear-gradient(180deg, #E0C3FF 0%, #9CC4FD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+}
